@@ -1,0 +1,8 @@
+numpy
+pandas
+seaborn
+zenml
+mlflow
+scikit-learn
+statsmodels
+-e .
