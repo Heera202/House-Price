@@ -72,7 +72,7 @@ class MissingValueHandler:
         self._strategy = strategy
             
     def execute_strategy(self, df:pd.DataFrame)->pd.DataFrame:
-        return self.set_strategy.handle(df)
+        return self._strategy.handle(df)
         
         
 if __name__ == "__main__":

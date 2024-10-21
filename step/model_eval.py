@@ -4,9 +4,10 @@ from typing import Tuple
 from sklearn.pipeline import Pipeline
 from zenml import step
 import pandas as pd
+import numpy as np
 
 @step(enable_cache=False)
-def model_eval(trained_model:Pipeline, X_test:pd.DataFrame, y_test:pd.DataFrame)->Tuple[dict,float]:
+def model_eval(trained_model:Pipeline, X_test:pd.DataFrame, y_test:pd.Series)->Tuple[dict, float]:
     if not isinstance(X_test, pd.DataFrame):
         raise TypeError("X_train must be a pandas DataFrame.")
     if not isinstance(y_test, pd.Series):
@@ -17,10 +18,26 @@ def model_eval(trained_model:Pipeline, X_test:pd.DataFrame, y_test:pd.DataFrame)
     
     X_test_processed = trained_model.named_steps["preprocessor"].transform(X_test)
     
-    evaluator = ModelEvaluation(strategy = RegressionModelEvaluation())
-    evaluation_metrics = evaluator.evaluate(trained_model.named_steps["model"], X_test_processed, y_test)
+    if np.any(np.isnan(X_test_processed)):
+        logging.error("Transformed test data contains NaN values.")
+        raise ValueError("Transformed test data contains NaN values.")
+
+    
+    evaluator = ModelEvaluation(strategy=RegressionModelEvaluation())
+    try:
+        evaluation_metrics = evaluator.evaluate(trained_model.named_steps["model"], X_test_processed, y_test)
+    except Exception as e:
+        logging.error(f"Error during model evaluation: {e}")
+        raise
     
     if not isinstance(evaluation_metrics, dict):
         raise ValueError("Evaluation metrics must be returned as a dictionary.")
-    mse = evaluation_metrics.get("Mean Squared Error", None)
-    return evaluation_metrics, mse
+    mea = evaluation_metrics.get("Mean Absolute Error", None)
+    
+    if mea is None:
+        logging.error("Mean Absolute Error was not computed correctly.")
+        raise ValueError("Mean Absolute Error is None. Please check the evaluation metrics.")
+    
+    logging.info(f"MAE: {mea}")
+    
+    return evaluation_metrics, mea

@@ -5,7 +5,7 @@ from step.handle_missing import handle_missing
 from step.model_buildd import model_buildd
 from step.model_eval import model_eval
 from step.outlier_step import outlier_detection_step
-
+import logging
 from zenml import Model, pipeline, step
 
 from zenml import step
@@ -32,9 +32,13 @@ def ml_pipeline():
     
     X_train, X_test, y_train, y_test = data_spliting(clean_data, target_column="SalePrice")
     
-    model = model_buildd(X_train, X_test, y_train, y_test)
+    model = model_buildd(X_train =X_train, y_train=y_train)
     
-    evaluation_metrics, mse = model_eval(trained_model=model, X_test=X_test, y_test=y_test)
+    evaluation_metrics, mea = model_eval(trained_model=model, X_test=X_test, y_test=y_test)
+    
+    logging.info(f"Evaluation Metrics: {evaluation_metrics}")
+    logging.info(f"Mean Absolute Error: {mea}")
+    
     return model
 
 if __name__ == "__main__":

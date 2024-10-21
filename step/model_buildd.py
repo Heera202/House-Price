@@ -12,9 +12,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from zenml import ArtifactConfig, step
 from zenml.client import Client
+from sklearn.linear_model import ElasticNet
 
 
-
+logging.basicConfig(level=logging.INFO)
 
 
 experiment_tracker = Client().active_stack.experiment_tracker
@@ -23,7 +24,7 @@ from zenml import Model
 
 model = Model(
     name = "prices_predictor",
-    version = "None",
+    version =None ,
     license="Apache 2.0",
     description = "House price Prediction Model"
     
@@ -37,7 +38,7 @@ def model_buildd( X_train:pd.DataFrame, y_train:pd.Series)->Annotated[Pipeline, 
             raise TypeError("y_train must be a pandas Series.")
     
         categorical_cols = X_train.select_dtypes(include=["object", "category"]).columns
-        numerical_cols = X_train.select_dtypes(include=["int", "float"]).columns
+        numerical_cols = X_train.select_dtypes(exclude=["object", "category"]).columns
         
         logging.info(f"Categorical columns:{categorical_cols.tolist()}")
         logging.info(f"Numerical columns:{numerical_cols.tolist()}")
@@ -46,7 +47,7 @@ def model_buildd( X_train:pd.DataFrame, y_train:pd.Series)->Annotated[Pipeline, 
         numerical_transformer = SimpleImputer(strategy="mean")
         categorical_transformer = Pipeline(
             steps=[
-                ("imputer", SimpleImputer(strategy="mean")),
+                ("imputer", SimpleImputer(strategy="most_frequent")),
                 ("Onehot", OneHotEncoder(handle_unknown = "ignore")),
             ]
         )
@@ -58,7 +59,8 @@ def model_buildd( X_train:pd.DataFrame, y_train:pd.Series)->Annotated[Pipeline, 
             ]
         )
         
-        pipeline = Pipeline(steps=[("preprocessor", preprocessor),("model", LinearRegression())])
+        '''pipeline = Pipeline(steps=[("preprocessor", preprocessor),("model", LinearRegression())])'''
+        pipeline = Pipeline(steps=[("preprocessor", preprocessor),("model", ElasticNet( alpha=1.0, l1_ratio=0.5))])
         if not mlflow.active_run():
             mlflow.start_run()
             
@@ -69,7 +71,7 @@ def model_buildd( X_train:pd.DataFrame, y_train:pd.Series)->Annotated[Pipeline, 
             logging.info("Model training completed")
             
             onehot_encoder = (
-                pipeline.named_steps["preprocessor"].transformers_[1][1].named_steps["onehot"]
+                pipeline.named_steps["preprocessor"].transformers_[1][1].named_steps["Onehot"]
             )
             
             onehot_encoder.fit(X_train[categorical_cols])
@@ -79,9 +81,10 @@ def model_buildd( X_train:pd.DataFrame, y_train:pd.Series)->Annotated[Pipeline, 
             
         except Exception as e:
             logging.error(f"Error during model training:{e}")
+            raise e
             
         finally:
-            mlflow.end_run
+            mlflow.end_run()
             
         return pipeline            
             
