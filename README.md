@@ -46,8 +46,6 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 
 3. EDA
 
-Columns like LotFrontage, Alley, PoolQC, Fence, and GarageType have missing data.
-
 5. Feature Engineering
     - **Multiple Transformation Techniques**: Log, Standard Scaling, Min-Max Scaling, One-Hot Encoding
     - **Skewness Handling**: Logarithmic transformation for normalized distributions
@@ -144,7 +142,6 @@ Columns like LotFrontage, Alley, PoolQC, Fence, and GarageType have missing data
 | Linear Regression | 403589797.4668578 |  0.9120892599420398 |
 | ElasticNet | 445187199.23572403 | 0.9030284303647271 |
 
-![Linear_Regression]image_url_or_path)
 
 
     
