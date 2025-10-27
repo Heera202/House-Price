@@ -30,10 +30,10 @@ The primary goal of this project is to predict house price based on various feat
 ✅ Dual Inference Modes
 
 
-####Tech Stack ####
+#### Tech Stack ####
 Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 
-####Model WorkFlow####
+#### Model WorkFlow ####
 1. Data Ingestion
    - **Factory Pattern Implementation**: Automated ingester selection by file type
 - **Extensible Architecture**: Easy to add new file format support
@@ -119,25 +119,25 @@ Model Serving Infrastructure
 3. Run
    install zenml locally then
    
-   # Initialize ZenML
+   ### Initialize ZenML
      zenml init
 
-   # Install required integrations
+   ### Install required integrations
     zenml integration install mlflow sklearn -y
 
-   # Setup ZenML stack
+   ### Setup ZenML stack
     zenml up
 
-   # Train, deploy, and run inference
+   ### Train, deploy, and run inference
     python run_deployment.py
    
 5. Test the API
-  # Make real-time predictions
+  ### Make real-time predictions
   python smaple_predict.py
 
     # View experiments in MLflow UI
   mlflow ui --backend-store-uri $(zenml mlflow get-tracking-uri)
-  # Open http://localhost:5000
+  ### Open http://localhost:5000
 
 
 
