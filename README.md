@@ -142,6 +142,7 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 | Linear Regression | 403589797.4668578 |  0.9120892599420398 |
 | ElasticNet | 445187199.23572403 | 0.9030284303647271 |
 
+![Linear_Regression]image_url_or_path)
 
 
     
