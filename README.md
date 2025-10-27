@@ -45,10 +45,6 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
     - **Strategy Pattern Architecture**: Easily switch between splitting methods
 
 3. EDA
-   
-![Heat_map](images/output.png)
-Each column on the x-axis represents a feature (variable) in your dataset (e.g., LotFrontage, GarageType, PoolQC, etc.).
-Most features are complete.
 
 Columns like LotFrontage, Alley, PoolQC, Fence, and GarageType have missing data.
 
