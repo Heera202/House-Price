@@ -119,7 +119,7 @@ Model Serving Infrastructure
 3. Run
    install zenml locally then
    
-   # Initialize ZenML
+     #Initialize ZenML
      zenml init
 
    ### Install required integrations
