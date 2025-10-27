@@ -51,12 +51,12 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
     - **Skewness Handling**: Logarithmic transformation for normalized distributions
     - **Modular Design**: Plugin-based architecture for new transformations
       
-  Missing Value Handling
+5. Missing Value Handling
     - **Smart Imputation**: Mean, median, mode, and constant value filling
     - **Configurable Thresholds**: Flexible missing value removal criteria
     - **Production-Ready**: Robust error handling and logging
     
-  Outlier Detection & Treatment
+6. Outlier Detection & Treatment
     - **Statistical Methods**: Z-Score and IQR-based outlier detection
     - **Multiple Handling Strategies**: Removal or capping of anomalies
     - **Visualization Tools**: Automated boxplot generation for analysis
@@ -64,19 +64,19 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 
 ### Machine Learning Features ###
 
-Model Training & Architecture
+1. Model Training & Architecture
   - **ElasticNet Regression**: Regularized linear model with L1/L2 penalty
   - **Automated Preprocessing**: Intelligent handling of numerical & categorical features
   - **MLflow Integration**: Complete experiment tracking and model versioning
   - **Pipeline Deployment**: End-to-end reproducible training workflows
 
-  Model Evaluation & Validation
+2. Model Evaluation & Validation
   - **Comprehensive Metrics**: MAE, MSE, R², and custom evaluation strategies
   - **Data Integrity Checks**: NaN detection and validation in test data
   - **Strategy Pattern**: Extensible evaluation framework for different model types
   - **Production Monitoring**: Ready for model performance tracking
 
-  Model Serving & Management
+3. Model Serving & Management
   - **Version Control**: Production model versioning with ZenML registry
   - **Artifact Loading**: Seamless retrieval of trained pipelines
   - **CI/CD Ready**: Integration with deployment pipelines
@@ -84,25 +84,25 @@ Model Training & Architecture
 
 ### Deployment & Serving Features ###
 
-  Continuous Deployment Pipeline
+1. Continuous Deployment Pipeline
   - **Automated Model Deployment**: Train → Validate → Deploy in single workflow
   - **MLflow Model Serving**: Production-ready REST API with configurable workers
   - **Zero-Downtime Updates**: Seamless model version switching
   - **Deployment Gates**: Automated quality checks before promotion
 
-  Real-time Inference API
+2. Real-time Inference API
   - **RESTful Endpoints**: Standard HTTP API for predictions
   - **JSON I/O Format**: Simple request/response structure
   - **Scalable Serving**: Multi-worker architecture for high throughput
   - **Health Monitoring**: Built-in health checks and metrics
 
-  Batch Inference Pipeline
+3. Batch Inference Pipeline
   - **Large-scale Predictions**: Efficient processing of multiple records
   - **Service Discovery**: Automatic detection of deployed models
   - **Flexible Data Sources**: Support for various data import methods
   - **Scheduled Execution**: Ready for cron jobs and automated workflows
 
-  Model Serving Infrastructure
+4. Model Serving Infrastructure
   - **Local Development**: MLflow local server for testing
   - **Production Ready**: Easy migration to cloud platforms
   - **Service Management**: Start/stop/status monitoring capabilities
