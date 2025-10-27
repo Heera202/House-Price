@@ -1,4 +1,4 @@
-#### END TO END HOUSE PRICE PREDICTION WITH ZENML  AND MLFLOW ####
+### END TO END HOUSE PRICE PREDICTION WITH ZENML  AND MLFLOW ###
 
 The project is based on building end to end machine learning pipeline for a house price prediction system.
 
@@ -6,13 +6,13 @@ The pipeline is build using ZenML, a MLOps framework that helps in managing mach
 
 The primary goal of this project is to predict house price based on various features such as size, location, condition, quality and year_build
 
-#### DataSet ####
+### DATASET ###
 1. Data Collection 
   Kaggle 
 2. Descripton: Contains housing features like such as 
   SalePrice, YearBuild, LoTArea, Overall Qual, Bedroom AbvGr,    Neighbour etc
 
-#### Features ###
+### FEATURES ###
 ✅ Data Ingestion 
 
 ✅ Data Cleaning & Preprocessing
@@ -30,10 +30,10 @@ The primary goal of this project is to predict house price based on various feat
 ✅ Dual Inference Modes
 
 
-#### Tech Stack ####
+### TECH STACK ###
 Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 
-#### Model WorkFlow ####
+### MODEL WORKDFLOW ###
 1. Data Ingestion
    - **Factory Pattern Implementation**: Automated ingester selection by file type
 - **Extensible Architecture**: Easy to add new file format support
@@ -107,7 +107,7 @@ Model Serving Infrastructure
 - **Service Management**: Start/stop/status monitoring capabilities
 - **Load Balancing**: Configurable worker processes
 
-#### Run Locally ####
+### RUN LOCALLY ###
 1. Create Virtual Environment
   python -m venv venv
   source venv/bin/activate   # for Linux/Mac
