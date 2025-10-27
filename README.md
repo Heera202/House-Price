@@ -44,19 +44,21 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
     - **Flexible Splitting Strategies**: Train-test split & K-Fold cross-validation
     - **Strategy Pattern Architecture**: Easily switch between splitting methods
 
-3. EDA 
+3. EDA
+   
+![Heat_map]image_url_or_path)
 
-4. Feature Engineering
+5. Feature Engineering
     - **Multiple Transformation Techniques**: Log, Standard Scaling, Min-Max Scaling, One-Hot Encoding
     - **Skewness Handling**: Logarithmic transformation for normalized distributions
     - **Modular Design**: Plugin-based architecture for new transformations
       
-5. Missing Value Handling
+6. Missing Value Handling
     - **Smart Imputation**: Mean, median, mode, and constant value filling
     - **Configurable Thresholds**: Flexible missing value removal criteria
     - **Production-Ready**: Robust error handling and logging
     
-6. Outlier Detection & Treatment
+7. Outlier Detection & Treatment
     - **Statistical Methods**: Z-Score and IQR-based outlier detection
     - **Multiple Handling Strategies**: Removal or capping of anomalies
     - **Visualization Tools**: Automated boxplot generation for analysis
