@@ -35,14 +35,14 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 
 ### MODEL WORKDFLOW ###
 1. Data Ingestion
-  - **Factory Pattern Implementation**: Automated ingester selection by file type
-  - **Extensible Architecture**: Easy to add new file format support
-  - **ZIP File Processing**: Automatic extraction and CSV detection
-  - **OOP Design**: Clean, maintainable code with abstraction and inheritance
+    - **Factory Pattern Implementation**: Automated ingester selection by file type
+    - **Extensible Architecture**: Easy to add new file format support
+    - **ZIP File Processing**: Automatic extraction and CSV detection
+    - **OOP Design**: Clean, maintainable code with abstraction and inheritance
 
 2. Data Cleaning
-  - **Flexible Splitting Strategies**: Train-test split & K-Fold cross-validation
-  - **Strategy Pattern Architecture**: Easily switch between splitting methods
+    - **Flexible Splitting Strategies**: Train-test split & K-Fold cross-validation
+    - **Strategy Pattern Architecture**: Easily switch between splitting methods
 
 3. EDA 
 
