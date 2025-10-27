@@ -12,7 +12,7 @@ The primary goal of this project is to predict house price based on various feat
 2. Descripton: Contains housing features like such as 
   SalePrice, YearBuild, LoTArea, Overall Qual, Bedroom AbvGr,    Neighbour etc
 
-### FEATURES ###
+## Features ##
 ✅ Data Ingestion 
 
 ✅ Data Cleaning & Preprocessing
@@ -30,10 +30,10 @@ The primary goal of this project is to predict house price based on various feat
 ✅ Dual Inference Modes
 
 
-### TECH STACK ###
+## Tech Stack ##
 Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 
-### MODEL WORKDFLOW ###
+## Model Workflow ##
 1. Data Ingestion
     - **Factory Pattern Implementation**: Automated ingester selection by file type
     - **Extensible Architecture**: Easy to add new file format support
@@ -62,7 +62,7 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
     - **Visualization Tools**: Automated boxplot generation for analysis
 
 
-### Machine Learning Features ###
+## Machine Learning Features ##
 
 1. Model Training & Architecture
   - **ElasticNet Regression**: Regularized linear model with L1/L2 penalty
@@ -82,7 +82,7 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
   - **CI/CD Ready**: Integration with deployment pipelines
   - **Reproducible Inference**: Consistent preprocessing during serving
 
-### Deployment & Serving Features ###
+## Deployment & Serving Features ##
 
 1. Continuous Deployment Pipeline
   - **Automated Model Deployment**: Train → Validate → Deploy in single workflow
@@ -108,7 +108,7 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
   - **Service Management**: Start/stop/status monitoring capabilities
   - **Load Balancing**: Configurable worker processes
 
-### RUN LOCALLY ###
+## RUN LOCALLY ##
 1. Create Virtual Environment
 
 3. Install Dependencies
