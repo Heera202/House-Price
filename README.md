@@ -47,18 +47,18 @@ Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 3. EDA 
 
 4. Feature Engineering
-  - **Multiple Transformation Techniques**: Log, Standard Scaling, Min-Max Scaling, One-Hot Encoding
-  - **Skewness Handling**: Logarithmic transformation for normalized distributions
-  - **Modular Design**: Plugin-based architecture for new transformations
+    - **Multiple Transformation Techniques**: Log, Standard Scaling, Min-Max Scaling, One-Hot Encoding
+    - **Skewness Handling**: Logarithmic transformation for normalized distributions
+    - **Modular Design**: Plugin-based architecture for new transformations
   Missing Value Handling
-  - **Smart Imputation**: Mean, median, mode, and constant value filling
-  - **Configurable Thresholds**: Flexible missing value removal criteria
-  - **Production-Ready**: Robust error handling and logging
+    - **Smart Imputation**: Mean, median, mode, and constant value filling
+    - **Configurable Thresholds**: Flexible missing value removal criteria
+    - **Production-Ready**: Robust error handling and logging
 
   Outlier Detection & Treatment
-  - **Statistical Methods**: Z-Score and IQR-based outlier detection
-  - **Multiple Handling Strategies**: Removal or capping of anomalies
-  - **Visualization Tools**: Automated boxplot generation for analysis
+    - **Statistical Methods**: Z-Score and IQR-based outlier detection
+    - **Multiple Handling Strategies**: Removal or capping of anomalies
+    - **Visualization Tools**: Automated boxplot generation for analysis
 
 
 ### Machine Learning Features ###
