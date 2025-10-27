@@ -6,7 +6,7 @@ The pipeline is build using ZenML, a MLOps framework that helps in managing mach
 
 The primary goal of this project is to predict house price based on various features such as size, location, condition, quality and year_build
 
-## DataSet ##
+##🗂️ DataSet ##
 1. Data Collection 
   Kaggle 
 2. Descripton: Contains housing features like such as 
