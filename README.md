@@ -61,7 +61,7 @@ Outlier Detection & Treatment
 - **Visualization Tools**: Automated boxplot generation for analysis
 
 
-#### Machine Learning Features ####
+### Machine Learning Features ###
 
 Model Training & Architecture
 - **ElasticNet Regression**: Regularized linear model with L1/L2 penalty
@@ -81,7 +81,7 @@ Model Serving & Management
 - **CI/CD Ready**: Integration with deployment pipelines
 - **Reproducible Inference**: Consistent preprocessing during serving
 
-#### Deployment & Serving Features ####
+### Deployment & Serving Features ###
 
 Continuous Deployment Pipeline
 - **Automated Model Deployment**: Train → Validate → Deploy in single workflow
@@ -109,16 +109,12 @@ Model Serving Infrastructure
 
 ### RUN LOCALLY ###
 1. Create Virtual Environment
-  python -m venv venv
-  source venv/bin/activate   # for Linux/Mac
-  venv\Scripts\activate      # for Windows
 
-2. Install Dependencies
+3. Install Dependencies
   pip install -r requirements.txt
 
-3. Run
-   
-   
+4. Run
+    
    ### Initialize mlflow tracker
        zenml experiment-tracker register mlflow_tracker --flavor=mlflow
    
