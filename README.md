@@ -33,10 +33,15 @@ The primary goal of this project is to predict house price based on various feat
 ## Tech Stack ##
 Python, Pandas, Numpy, Matplotlib, Scikit-Learn, Mlflow, Mlops, FastAPI
 **Programming Language** | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="30"/> **Python** |
+
 | **Data Handling & Analysis** | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" width="30"/> **Pandas**  •  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" width="30"/> **NumPy** |
+
 | **Visualization** | <img src="https://matplotlib.org/stable/_static/images/logo2.svg" width="30"/> **Matplotlib** |
+
 | **Machine Learning** | <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="40"/> **Scikit-Learn** |
+
 | **MLOps & Experiment Tracking** | <img src="https://mlflow.org/images/MLflow-logo-final-black.png" width="50"/> **MLflow**  •  🧩 **MLOps** |
+
 | **API Development** | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" width="30"/> **FastAPI** |
 
 ## Model Workflow ##
