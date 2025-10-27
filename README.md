@@ -117,27 +117,27 @@ Model Serving Infrastructure
   pip install -r requirements.txt
 
 3. Run
-   install zenml locally then
    
-     #Initialize ZenML
-     zenml init
+   
+   ### Initialize mlflow tracker
+       zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+   
+   ### Register mlflow in stack
+        zenml stack register my_mlflow_stack -o default -a default -a default -e mlflow_tracker
 
-   ### Install required integrations
-    zenml integration install mlflow sklearn -y
-
-   ### Setup ZenML stack
-    zenml up
+   ### Check the stack table
+       zenml stack describe      
 
    ### Train, deploy, and run inference
-    python run_deployment.py
+        python run_deployment.py
    
 5. Test the API
   ### Make real-time predictions
-  python smaple_predict.py
+    python smaple_predict.py
 
-    # View experiments in MLflow UI
-  mlflow ui --backend-store-uri $(zenml mlflow get-tracking-uri)
-  ### Open http://localhost:5000
+  ### View experiments in MLflow UI
+    mlflow ui --backend-store-uri $(zenml mlflow get-tracking-uri)
+    Open http://localhost:5000
 
 
 
