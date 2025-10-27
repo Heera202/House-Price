@@ -14,12 +14,19 @@ The primary goal of this project is to predict house price based on various feat
 
 #### Features ###
 ✅ Data Ingestion 
+
 ✅ Data Cleaning & Preprocessing
+
 ✅ Exploratory Data Analysis (EDA)
+
 ✅ Feature Engineering
+
 ✅ Model Training & Hyperparameter Tuning
+
 ✅ Model Evaluation
+
 ✅ Local MLFlow Deployment using REST-API
+
 ✅ Dual Inference Modes
 
 
